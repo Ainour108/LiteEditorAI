@@ -689,7 +689,7 @@ ipcMain.handle('tp:saveFileAs', async (e, { content, name, ext } = {}) => {
 const TP_AGENTS = {
   claude: { cmd: 'claude', args: ['-p', '--output-format', 'text'], via: 'stdin' },
   codex: { cmd: 'codex', args: ['exec'], via: 'arg' },
-  antigravity: { cmd: '/Applications/Antigravity.app/Contents/Resources/app/bin/antigravity', args: ['chat', '-m', 'agent', '-'], via: 'stdin' }
+  antigravity: { cmd: '/Applications/Antigravity.app/Contents/Resources/app/bin/antigravity', args: ['chat', '-m', 'agent'], via: 'arg' }
 };
 // GUI-сессия часто не видит ~/.local/bin и nvm-bin → дополняем PATH, чтобы claude/codex нашлись.
 function tpEnv() {
